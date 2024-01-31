@@ -40,6 +40,18 @@ array.shift(); // remove o primeiro elemento do array, no caso o número 25;
 array.length; // mostra o tamanho do array;
 array[2] = 76; // adicionou o número 76 ao segundo índice do array;
 
+// E para percorrer e mostrar todos os elementos de uma array, é feita a seguinte estrutura.
+
+function viewElements(arr){
+     arr = [1, 2, 3, 4, 5];
+
+     for(let i = 0; i < arr.length; i++){
+          console.log(arr[i]);
+     }
+}
+
+viewElements();
+
 // Vamos explicar um dos usos do array com a utilização do algoritmo de ordenação, aonde teremos um array de n números e que deverá ser ordenado pelo algoritmo que irémos implementar.
 
 function insertion(){
@@ -67,3 +79,16 @@ insertion()
 
      Os arrays são usados em praticamente qualquer tipo de aplicação seja ela para aprendizado de máquina, softwares de otimizações, controle de fluxo do software, armazenamento de varios dados de um mesmo tipo e etc. O array é uma estrutura básica e que é e deve ser usada em praticamente todas as aplicações cotidianas;
 */
+
+// O array que pode ser conhecido como vetor, também pode ser chamado de matriz. Um vetor nada mais é do que um array unidimensional (igual aos arrays dos exemplos acima), e a matriz é um array multidimensional, podendo ter várias dimensões. Veja abaixo a diferença.
+
+let vetor = [1, 2, 3, 4, 5]; // esse é um array unidimensional.
+let matriz = [ // e esse é um array multidimensional, nesse caso tridimensional.
+     [1, 2, 3, 4, 5],
+     ["Rafael", "Bruna", "Vitória"] ,
+     ["Kloop", "Alexander-Arnold"]
+];
+
+// para acessar algum elemento dessa matriz, será usado o seguinte comando.
+
+console.log(matriz[1][2]); // o primeiro colchetes [1] indica qual dimensão do array deve ser acessada, já o segundo [2] indica que deve ser mostrado o elemento que está no índice 2 do array, nesse caso será acessado o segundo array e será mostrado o nome "Vitória".
