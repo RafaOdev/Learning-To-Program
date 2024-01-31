@@ -77,7 +77,7 @@ insertion()
 /*
      POR QUE USAR ? 
 
-     Os arrays são usados em praticamente qualquer tipo de aplicação seja ela para aprendizado de máquina, softwares de otimizações, controle de fluxo do software, armazenamento de varios dados de um mesmo tipo e etc. O array é uma estrutura básica e que é e deve ser usada em praticamente todas as aplicações cotidianas;
+     Os arrays são usados em praticamente qualquer tipo de aplicação seja ela para aprendizado de máquina, softwares de otimizações, controle de fluxo do software, armazenamento de varios dados de um mesmo tipo e etc. O array é uma estrutura básica e que é e deve ser usada em praticamente todas as aplicações cotidianas.
 */
 
 // O array que pode ser conhecido como vetor, também pode ser chamado de matriz. Um vetor nada mais é do que um array unidimensional (igual aos arrays dos exemplos acima), e a matriz é um array multidimensional, podendo ter várias dimensões. Veja abaixo a diferença.
