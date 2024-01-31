@@ -101,4 +101,3 @@ function viewElements() // essa função foi criada fora da classe pilha para qu
 viewElements(); // chama a função viewElements para que ela seja executada corretamente.
 
 // Por aqui terminamos o aprendizado sobre a estrutura de dado pilha.
-
