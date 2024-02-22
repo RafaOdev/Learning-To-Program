@@ -1,6 +1,6 @@
 /*Lista encadeada*/
 
-/*Uma lista encadeada ou lista ligada é uma estrutura dinâmica e linear, aonde é composta por vários nós. Cada nó contém o dado que será armazenado e um ponteiro que irá apontar para o próximo nó da lista. Os elementos da lista são alocados dinâmicamente na memória conforme cada novo dado é armazenado dentro de um nó na lista. A cada dado removido da lista, a memória em que esse dado foi criado, será desalocada, assim liberando espaço na memória*/
+/*Uma lista encadeada ou lista ligada é uma estrutura dinâmica e linear, aonde é composta por vários nós. Cada nó contém o dado que será armazenado e um ponteiro que irá apontar para o próximo nó da lista. Os elementos da lista são alocados dinâmicamente na memória conforme cada novo dado é armazenado dentro de um nó na lista. A cada dado removido da lista, a memória em que esse dado foi criado, será desalocada, assim liberando espaço na memória. Também é possível criar uma lista encadeada com alocação estática, aonde se é usado um array com tamanho definido.*/
 
 /*Aqui é criado uma classe node que criará os nós aonde será armazenado os dados da lista.*/
 class Node{
@@ -98,5 +98,6 @@ let listNames = new List();
 listNames.appended(1);
 listNames.appended(2);
 listNames.appended(3);
-console.log(listNames.get(2));
+listNames.delete(1);
+console.log(listNames.get(1));
 console.log(listNames.values());

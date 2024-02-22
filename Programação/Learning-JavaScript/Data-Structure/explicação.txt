@@ -4,7 +4,7 @@ CLASSIFICAÇÃO DAS ESTRUTURAS:
     1. Estruturas de dados lineares: Arrays, stacks(pilhas), filas, linked Lists (listas vinculadas), hashTable (tabela hash) e outras;
     2. Estruturas de dados não lineares: binaryTree(árvores binárias), graph(grafos);
 
-ESTRUTURAS DE DADOS LINEARES:  É uma estrutura de dado que organiza os dados de forma sequencial ou linearmente, onde os elementos são anexados ao seu adjacente anterior e ao próximo da estrutura, isso se da o nome de estrutura de dados linear
+ESTRUTURAS DE DADOS LINEARES:  É uma estrutura de dado que organiza os dados de forma sequencial ou linearmente, onde os elementos são anexados ao seu adjacente anterior e ao próximo da estrutura, isso se da o nome de estrutura de dados linear.
 
    1. ARRAY: Array é uma estrutura de dado básica que na maioria das linguagens de programação armazena apenas um tipo de dado (INT, STRING, BOOLEANO e etc). O array armazena os seus elementos dentro de índices, esses índices ajuda a localizar o elemento dentro do array
 
@@ -12,4 +12,4 @@ ESTRUTURAS DE DADOS LINEARES:  É uma estrutura de dado que organiza os dados de
 
    3. QUEUE(FILA): Fila é uma estrutura de dados muito parecida com a pilha, a sua unica diferença a ordem de retirada dos elementos. Utilizando a regra FIFO(Firs In First Out, em português, Primeiro a entrar, primeiro a sair). A fila começa a remover os dados a partir do primeiro dado que foi armazenado na estrutura, um exemplo é a fila de um banco, a primeira pessoa ao entrar na fila, será a primeira a ser atendida, a mesma coisa acontece com a fila. Mas em um computador, a fila os elementos da fila não se movem para outra posição após um elemento ser retirado, na realidade, o que acontece é que é indicado a posição do elemento dentro de um vetor.
 
-   4. Lista: A lista é uma estrutura de dado bastrata que implementa uma coleção ordenada de elementos. Uma lista pode ser implementada estaticamente, que apenas verifica e enumera os elementos. Já uma lista dinâmica ou mutável permite a adição, substituição ou remoção de elementos durante a existência da lista, como uma lista encadeada ou duplamente encadeada.
+   4. Listas: A lista é uma estrutura de dado bastrata que implementa uma coleção ordenada de elementos. Uma lista pode ser implementada estaticamente, que apenas verifica e enumera os elementos. Já uma lista dinâmica ou mutável permite a adição, substituição ou remoção de elementos durante a existência da lista, como uma lista encadeada ou duplamente encadeada.
