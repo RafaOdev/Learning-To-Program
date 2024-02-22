@@ -83,6 +83,8 @@ class DoubleLinkedList{ // aqui é criado a classe da lista duplamente encadeada
             this.head.prev = null; // e como foi o primeiro elemento da lista que foi removido, a referência para o nó anterior da lista irá receber nulo. Pois não há mais nenhum elemento antes do primeiro elemento da lista.
        }
 
+       this.length--; // a cada nó que é removido, o tamanho da lista irá decrementar mais 1.
+
        //OBS: Esse método irá sempre remover o primeiro elemento da lista. E sua complexidade é O(1). Pois não temos estruturas que dependerá do tamanho da lista, já que estamos lidando com variáveis constantes, removendo sempre o primeiro elemento da lista.
     }
 
@@ -99,6 +101,7 @@ class DoubleLinkedList{ // aqui é criado a classe da lista duplamente encadeada
             this.tail = this.tail.prev; // o final da lista irá receber a referência para o nó anterior da lista, assim removendo o último elemento da lista e adicionando o elemento anterior como o último da lista.
             this.tail.next = null; // e como não existe elemento após o último elemento da lista, a referência para o próximo nó da lista irá receber nulo.
         }
+        this.length--; // a cada nó que é removido, o tamanho da lista irá decrementar mais 1.
 
         //OBS: esse método remove sempre o último elemento da lista. E sua complexidade é O(1). Pois não temos estruturas que dependerá do tamanho da lista, já que estamos lidando com variáveis constantes, removendo sempre o último elemento da lista.
     }
@@ -130,6 +133,8 @@ class DoubleLinkedList{ // aqui é criado a classe da lista duplamente encadeada
         if(current.next !== null){ // essa estrutura if irá verificar se o elemento encontrado tem o seu próximo elemento diferente de nulo.
             current.next.prev = previous; // caso a condição retorne verdadeiro, o próximo elemento do elemento que foi encontrado e deletado irá receber a referência para o elemento anterior do elemento que foi encontrado e deletado.
         } // essa estrutura irá fazer com que o elemento anterior ao elemento que foi deletado, seja atribuido como o elemento anterior do elemento posterior ao elemento que foi deletado.
+
+        this.length--; // a cada nó que é removido, o tamanho da lista irá decrementar mais 1.
 
         return true;
 
