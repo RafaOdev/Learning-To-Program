@@ -1,0 +1,14 @@
+A:\Dev-Projects\C#\Data-Structure-C#\Queue-Structure\bin\Debug\net8.0\Queue-Structure.exe
+A:\Dev-Projects\C#\Data-Structure-C#\Queue-Structure\bin\Debug\net8.0\Queue-Structure.deps.json
+A:\Dev-Projects\C#\Data-Structure-C#\Queue-Structure\bin\Debug\net8.0\Queue-Structure.runtimeconfig.json
+A:\Dev-Projects\C#\Data-Structure-C#\Queue-Structure\bin\Debug\net8.0\Queue-Structure.dll
+A:\Dev-Projects\C#\Data-Structure-C#\Queue-Structure\bin\Debug\net8.0\Queue-Structure.pdb
+A:\Dev-Projects\C#\Data-Structure-C#\Queue-Structure\obj\Debug\net8.0\Queue-Structure.GeneratedMSBuildEditorConfig.editorconfig
+A:\Dev-Projects\C#\Data-Structure-C#\Queue-Structure\obj\Debug\net8.0\Queue-Structure.AssemblyInfoInputs.cache
+A:\Dev-Projects\C#\Data-Structure-C#\Queue-Structure\obj\Debug\net8.0\Queue-Structure.AssemblyInfo.cs
+A:\Dev-Projects\C#\Data-Structure-C#\Queue-Structure\obj\Debug\net8.0\Queue-Structure.csproj.CoreCompileInputs.cache
+A:\Dev-Projects\C#\Data-Structure-C#\Queue-Structure\obj\Debug\net8.0\Queue-Structure.dll
+A:\Dev-Projects\C#\Data-Structure-C#\Queue-Structure\obj\Debug\net8.0\refint\Queue-Structure.dll
+A:\Dev-Projects\C#\Data-Structure-C#\Queue-Structure\obj\Debug\net8.0\Queue-Structure.pdb
+A:\Dev-Projects\C#\Data-Structure-C#\Queue-Structure\obj\Debug\net8.0\Queue-Structure.genruntimeconfig.cache
+A:\Dev-Projects\C#\Data-Structure-C#\Queue-Structure\obj\Debug\net8.0\ref\Queue-Structure.dll

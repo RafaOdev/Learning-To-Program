@@ -93,11 +93,11 @@ class List{ // a class list, cria a lista em si. Dentro dessa classe, será arma
 
 /*A seguir irei criar uma instância da classe list aonde será possível trabalha com os métodos da lista que foi criada.*/
 
-let listNames = new List();
+let listNames = new List(); // aqui é criada uma instância da classe list que irá armazenar os métodos da lista.
 
-listNames.appended(1);
+listNames.appended(1); // aqui é chamado o método appended que irá adicionar um valor a lista.
 listNames.appended(2);
 listNames.appended(3);
-listNames.delete(1);
-console.log(listNames.get(1));
-console.log(listNames.values());
+listNames.delete(1); // aqui é chamado o método delete que irá remover um valor da lista.
+console.log(listNames.get(1)); // aqui é chamado o método get que irá retornar um valor em uma posição específica da lista.
+console.log(listNames.values()); // aqui é chamado o método values que irá retornar todos os valores que estão armazenados na lista.

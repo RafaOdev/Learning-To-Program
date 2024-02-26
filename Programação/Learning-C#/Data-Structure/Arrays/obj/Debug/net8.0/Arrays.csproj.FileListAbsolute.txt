@@ -1,0 +1,14 @@
+A:\Dev-Projects\C#\Data-Structure-C#\Arrays\obj\Debug\net8.0\Arrays.GeneratedMSBuildEditorConfig.editorconfig
+A:\Dev-Projects\C#\Data-Structure-C#\Arrays\obj\Debug\net8.0\Arrays.AssemblyInfoInputs.cache
+A:\Dev-Projects\C#\Data-Structure-C#\Arrays\obj\Debug\net8.0\Arrays.AssemblyInfo.cs
+A:\Dev-Projects\C#\Data-Structure-C#\Arrays\obj\Debug\net8.0\Arrays.csproj.CoreCompileInputs.cache
+A:\Dev-Projects\C#\Data-Structure-C#\Arrays\bin\Debug\net8.0\Arrays.exe
+A:\Dev-Projects\C#\Data-Structure-C#\Arrays\bin\Debug\net8.0\Arrays.deps.json
+A:\Dev-Projects\C#\Data-Structure-C#\Arrays\bin\Debug\net8.0\Arrays.runtimeconfig.json
+A:\Dev-Projects\C#\Data-Structure-C#\Arrays\bin\Debug\net8.0\Arrays.dll
+A:\Dev-Projects\C#\Data-Structure-C#\Arrays\bin\Debug\net8.0\Arrays.pdb
+A:\Dev-Projects\C#\Data-Structure-C#\Arrays\obj\Debug\net8.0\Arrays.dll
+A:\Dev-Projects\C#\Data-Structure-C#\Arrays\obj\Debug\net8.0\refint\Arrays.dll
+A:\Dev-Projects\C#\Data-Structure-C#\Arrays\obj\Debug\net8.0\Arrays.pdb
+A:\Dev-Projects\C#\Data-Structure-C#\Arrays\obj\Debug\net8.0\Arrays.genruntimeconfig.cache
+A:\Dev-Projects\C#\Data-Structure-C#\Arrays\obj\Debug\net8.0\ref\Arrays.dll

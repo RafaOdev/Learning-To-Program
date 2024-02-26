@@ -141,6 +141,18 @@ class DoubleLinkedList{ // aqui é criado a classe da lista duplamente encadeada
         //OBS: Esse método irá remover um elemento de uma posição fornecida. E sua complexidade é O(n). Pois temos estruturas nesse método que dependerá do tamanho da lista para que suas operações sejam realizadas.
     }
 
+    isEmpty(){ // esse método irá verificar se a lista está vazia.
+        return (this.length === 0) // esse método irá verificar se a lista está vazia. Caso o tamanho da lista seja igual a 0, irá retornar verdadeiro, caso contrário, irá retornar falso.
+    }
+
+    front(){ // esse método irá retornar o primeiro elemento da lista.
+        return this.head !== null ? this.head.element : console.log('List is empty'); // esse método irá retornar o primeiro elemento da lista. Caso a lista não esteja vazia, irá retornar o primeiro elemento da lista. Caso contrário, irá retornar a mensagem de erro. 
+    }
+
+    back(){
+        return this.tail !== null ? this.tail.element : console.log('List is empty'); // esse método irá retornar o último elemento da lista. Caso a lista não esteja vazia, irá retornar o último elemento da lista. Caso contrário, irá retornar a mensagem de erro.
+    }
+
     value(){ // esse método irá nos mostrar os elementos que tem na lista.
         let current = this.head; // aqui criamos uma várivel que irá receber a cabeça da lista. Essa variável será utilizada para percorrer a lista.
         while(current !== null){ // esse loop irá percorrer a lista enquanto a condição de que a variável current seja diferente de nulo.

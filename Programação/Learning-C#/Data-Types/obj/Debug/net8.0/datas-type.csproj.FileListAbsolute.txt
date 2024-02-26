@@ -1,0 +1,14 @@
+A:\Dev-Projects\C#\Data-Types\datas-type\datas-type\obj\Debug\net8.0\datas-type.GeneratedMSBuildEditorConfig.editorconfig
+A:\Dev-Projects\C#\Data-Types\datas-type\datas-type\obj\Debug\net8.0\datas-type.AssemblyInfoInputs.cache
+A:\Dev-Projects\C#\Data-Types\datas-type\datas-type\obj\Debug\net8.0\datas-type.AssemblyInfo.cs
+A:\Dev-Projects\C#\Data-Types\datas-type\datas-type\obj\Debug\net8.0\datas-type.csproj.CoreCompileInputs.cache
+A:\Dev-Projects\C#\Data-Types\datas-type\datas-type\bin\Debug\net8.0\datas-type.exe
+A:\Dev-Projects\C#\Data-Types\datas-type\datas-type\bin\Debug\net8.0\datas-type.deps.json
+A:\Dev-Projects\C#\Data-Types\datas-type\datas-type\bin\Debug\net8.0\datas-type.runtimeconfig.json
+A:\Dev-Projects\C#\Data-Types\datas-type\datas-type\bin\Debug\net8.0\datas-type.dll
+A:\Dev-Projects\C#\Data-Types\datas-type\datas-type\bin\Debug\net8.0\datas-type.pdb
+A:\Dev-Projects\C#\Data-Types\datas-type\datas-type\obj\Debug\net8.0\datas-type.dll
+A:\Dev-Projects\C#\Data-Types\datas-type\datas-type\obj\Debug\net8.0\refint\datas-type.dll
+A:\Dev-Projects\C#\Data-Types\datas-type\datas-type\obj\Debug\net8.0\datas-type.pdb
+A:\Dev-Projects\C#\Data-Types\datas-type\datas-type\obj\Debug\net8.0\datas-type.genruntimeconfig.cache
+A:\Dev-Projects\C#\Data-Types\datas-type\datas-type\obj\Debug\net8.0\ref\datas-type.dll
