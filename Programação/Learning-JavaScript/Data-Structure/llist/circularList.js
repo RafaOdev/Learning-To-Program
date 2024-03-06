@@ -40,7 +40,7 @@ class CircularList{ // essa classe irá conter os métodos de inserção, remoç
         let current = this.head; // uma variável chamada current será criada e irá receber a referência para o nó principal da lista.
         if(this.size === 1) return this.head = null; // caso a lista contenha apenas um nó, o nó principal será removido e a referência para o nó principal será nula.
 
-        for(let i = 0; i < this.size - 1; i++){ // esse loop irá percorrer a lista até o penúltimo nó.
+        for(let i = 0; i < this.size - 1; i++){ // esse loop irá percorrer a lista até o último nó.
             this.advanced(); // a cada loop, a referência para o próximo nó principal será atualizada.
         }
 

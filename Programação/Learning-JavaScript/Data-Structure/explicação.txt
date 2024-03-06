@@ -12,4 +12,16 @@ ESTRUTURAS DE DADOS LINEARES:  É uma estrutura de dado que organiza os dados de
 
    3. QUEUE(FILA): Fila é uma estrutura de dados muito parecida com a pilha, a sua unica diferença a ordem de retirada dos elementos. Utilizando a regra FIFO(Firs In First Out, em português, Primeiro a entrar, primeiro a sair). A fila começa a remover os dados a partir do primeiro dado que foi armazenado na estrutura, um exemplo é a fila de um banco, a primeira pessoa ao entrar na fila, será a primeira a ser atendida, a mesma coisa acontece com a fila. Mas em um computador, a fila os elementos da fila não se movem para outra posição após um elemento ser retirado, na realidade, o que acontece é que é indicado a posição do elemento dentro de um vetor.
 
-   4. Listas: A lista é uma estrutura de dado bastrata que implementa uma coleção ordenada de elementos. Uma lista pode ser implementada estaticamente, que apenas verifica e enumera os elementos. Já uma lista dinâmica ou mutável permite a adição, substituição ou remoção de elementos durante a existência da lista, como uma lista encadeada ou duplamente encadeada.
+   4. LIST(LISTAS): A lista é uma estrutura de dado bastrata que implementa uma coleção ordenada de elementos. Uma lista pode ser implementada estaticamente, que apenas verifica e enumera os elementos. Já uma lista dinâmica ou mutável permite a adição, substituição ou remoção de elementos durante a existência da lista, como uma lista encadeada,duplamente encadeada ou circular.
+
+   5. HASH TABLE(TABELA HASH): A tabela hash pode ser considerada uma estrutura de dados linear e também não linear, pois irá depender da maneira que uma colisão é tratada. A tabela hash tem como sua principal tarefa melhorar a eficiência de busca apartir de uma chave associada ao elemento que será armazenado. E essa eficiência em buscas se dá pelo possível acesso direto pela chave que foi associada ao elemento, e com esse acesso direto ao elemento, e uma boa implementação da mesma, ela pode ter uma complexidade constante (O(1)) que torna a eficiência excelente para buscas. 
+   Sua implementação será com vetores de determinado tamanho, e para cada elemento que desejamos armazenar na tabela, será gerado um índice. Para que seja gerado esse índice aonde será armazenado o elemento, vai ser preciso também gerar uma chave de um tipo especifíco e dividir essa chave pelo tamanho da tabela, com o resto dessa divisão sendo o índice.
+
+   Exemplo: 
+    chave = 914018
+    tamanho da tabela = 8
+
+    914018 % 8 = 2
+
+   Nesse exemplo foi dividido a chave pelo tamanho do array, e essa divisão terminou com um resto dois, e agora o elemento associado a chave, será armazenado no índice 2 do vetor. Como dito anteriormente, existem casos de colisões de índices, aonde várias chaves pode gerar o mesmo índice; E por conta dessas colisões tanto a implementação quanto a sua eficiência pode variar. Por isso deve se ter muito cuidado ao implementar uma tabela hash, pois qualquer deslize em sua implementação é passível de torna sua eficiência precária e tornar o uso da tabela inviável.
+

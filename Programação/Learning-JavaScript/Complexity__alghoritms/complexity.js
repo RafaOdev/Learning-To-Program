@@ -12,7 +12,7 @@ let A = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 let elementoA = 1;
 for(let i = 0; i < A.length; i++){
     if(A[i] === elementoA){
-        console.log('Elemento encontrado na posição: ' + i);
+        console.log('O caso otimista encontrou o elemento na posição: ' + i);
         break;
     }
 }
@@ -24,7 +24,7 @@ let B = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 let elementoB = 10;
 for(let j = 0; j < B.length; j++){
     if(B[j] === elementoB){
-        console.log('Elemento encontrado na posição: ' + j);
+        console.log('O caso pessimista encontrou o elemento na posição: ' + j);
         break;
     }
 }
@@ -40,11 +40,11 @@ function search(){
     alto = treeBinarie.length - 1;
 
     while(baixo <= alto){
-        meio = Math.floor((baixo + alto) / 2);
+        let meio = Math.floor((baixo + alto) / 2);
         let chute = treeBinarie[meio];
 
         if(chute === item){
-           return console.log('Elemento encontrado na posição: ' + meio);
+           return console.log('O caso médio encontrou o elemento na posição: ' + meio);
         } else if(chute > item){
             alto = meio - 1;
         } else{
@@ -82,16 +82,238 @@ console.log(search());
     7. Crescimento fatorial - O(n!) : A complexidade fatorial representa o crescimento fatorial de operações em um algoritmo, tendo o seu número de operações aumentando de forma fatorial e consequentemente piorando o seu desempenho. Dada uma entrada de 10, seria O(10!), aonde 10! seria 3.628.800. Assim com essa entrada em um algoritmo com complexidade O(n!), o algoritmo faria possíveis 3.628.800 operações.
 */
 
+/*EXEMPLOS*/
+
+/*Crescimento constante - O(1)*/
+
+let a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let temp = a[0];
+console.log('O(1)', temp);
+
+/*Nesse exemplo de algoritmo, temos a complexidade O(1), pois independente do tamanho do array, estamos acessando diretamente um índice.*/
+
+/*Crescimento logarítmico - O(log n)*/
+
+let b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let itemB = 4;
+
+function binareTree(){
+    baixo = 0;
+    alto = b.length - 1;
+
+    while(baixo <= alto){
+        let meio = Math.floor((baixo + alto) / 2);
+        let chute = b[meio];
+
+        if(chute === itemB){
+           return console.log('algoritmo O(log n) encontrou o elemento na posição: ' + meio)
+        }else if(chute > itemB){
+            alto = meio - 1;
+        }else{
+            baixo = meio + 1;
+        }   
+    }
+
+    return null;
+}
+
+console.log(binareTree());
 
 
-/*let A = [];
-let temp;
-let i;
+/*Nesse exemplo de algoritmo, temos a complexidade O(log n), pois a cada iteração cortamos pela metade os número de um possível resultado e pela notação Big O esse algoritmo é O(log n), pois esse algoritmo cresce de forma logarítmica, e com esse algoritmo podendo reduzir de forma significativa o seu número de operações necessárias para encontrar o elemento.*/
 
-temp = A[0];
+/*Crescimento linear - O(n)*/
 
-for(i = 0; i < 10; i++){
-    if(temp < A[i]) temp = A[i]
-    console.log(temp)
-}*/
+let c = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let itemC = 7;
+
+for(let i = 0; i < c.length; i++){
+    if(c[i] === itemC) console.log('O algoritmo 0(n) encontrou o elemento na posição: ' + i);
+}
+
+/*Nesse exemplo de algoritmo, temos a complexidade O(n), pois para encontrar o elemento, o algoritmo precisará percorrer pelo array. Assim o algoritmo podendo crescer o número de operações linearmente dependendo do tamanho da entrada n.*/
+
+/*Crescimento logarítmicamente linear - O(n log(n))*/
+
+let d = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let itemD = 6;
+
+function mergeSort(d){
+    if(d.length === 1) return d;
+
+    const mid = Math.floor(d.length / 2);
+    const right = d.slice(0, mid);
+    const left = d.slice(mid);
+
+    return merge(mergeSort(right), mergeSort(left));
+}
+
+function merge(rigth, left){
+    let result = [];
+    let i = 0;
+    let j = 0;
+
+    while(i < rigth.lenght && j < left.length){
+        if(rigth[i] < left[j]){
+            result.push(rigth[i]);
+            i++;
+        }else{
+            result.push(left[j]);
+            j++;
+        }
+    }
+
+    return result.concat(rigth.slice(i)).concat(left.slice(j));
+}
+
+console.log(mergeSort(d));
+
+/*Nesse exemplo de algoritmo, temos a complexidade O(n log(n)), pois primeiramente é feito um dos fatores de um algoritmo O(log n) que é dividir dividir os elementos, no caso desse algoritmo, foi o array. E depois é utilizado um dos fatores de algoritmos O(n), que é percorrer pelos pelas divisões do array.*/
+
+/*Crescimento quadrático - O(n^2)*/
+
+let e = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1];
+
+function ordenationSort(){
+    for(let i = 0; i < e.length; i++){
+        for(let j = i + 1; j < e.length; j++){
+            if(e[i] > e[j]){
+                let temp = e[i];
+                e[i] = e[j];
+                e[j] = temp;
+            }            
+        }
+    }
+
+    return e;
+}
+
+console.log(ordenationSort());
+
+/*Nesse exemplo de algoritmo tem a complexidade quadrática, pois ele percorre duas vezes o array, o que acaba dobrando o número de operações. Com o array tendo 9 posições e a função tendo dois for, ele percorre o array 9^2 vezes o que resulta em 18 operações para apenas um array que se tivesse apenas um for, teria 9 operações.*/
+
+/*Crescimento exponencial - O(2^n)*/
+
+function fibonacci(n){
+    if(n <= 1){
+        return n;
+    }else{
+        return fibonacci(n - 1) + fibonacci(n - 2);
+    }
+}
+
+const result = fibonacci(1);
+console.log(result);
+
+/*Nesse exemplo de complexidade exponencial, será calculado o fibonacci de n, pegando n - 1 + n - 2. Exemplo, se n fosse 10, a cada chamada recursiva, seria somado o valor de 10 10 - 1 com 10 - 2. Assim, na primeira chamada recursiva dupla, seria pego o fibonacci 9 e o fibonacci 8, e assim por diante até encontrar o n ser menor ou igual a 0. Depois seria somado os fibonacci começando de 1 + 0 até 9 + 8 e somando o fibonacci pelo valor da soma anterior. Como será mostrado no exemplo abaixo:
+
+    fibonacci(10) chama fibonacci(9) + fibonacci(8)
+    fibonacci(9) chama fibonacci(8) + fibonacci(7)
+    fibonacci(8) chama fibonacci(7) + fibonacci(6)
+    fibonacci(7) chama fibonacci(6) + fibonacci(5)
+    fibonacci(6) chama fibonacci(5) + fibonacci(4)
+    fibonacci(5) chama fibonacci(4) + fibonacci(3)
+    fibonacci(4) chama fibonacci(3) + fibonacci(2)
+    fibonacci(3) chama fibonacci(2) + fibonacci(1)
+    fibonacci(2) chama fibonacci(1) + fibonacci(0)
+    fibonacci(1) = 1
+    fibonacci(0) = 0
+
+    Depois os fatoriais iram ser somados pelo resultado da soma anterior, assim:
+
+    fibonacci(0) = 0
+    fibonacci(1) = 1
+    fibonacci(2) = 1 + 0 = 1
+    fibonacci(3) = 1 + 1 = 2
+    fibonacci(4) = 2 + 1 = 3
+    fibonacci(5) = 3 + 2 = 5
+    fibonacci(6) = 5 + 3 = 8
+    fibonacci(7) = 8 + 5 = 13
+    fibonacci(8) = 13 + 8 = 21
+    fibonacci(9) = 21 + 13 = 34
+    fibonacci(10) = 34 + 21 = 55
+*/
+
+/*Crescimento fatorial - O(n!)*/
+
+function fatorial(n){
+    if(n === 0){
+        return 1;
+    }else{
+        return n * fatorial(n - 1);
+    }
+}
+
+console.log(factorial(10));
+
+/*Nesse exemplo de algoritmo com complexidade fatorial, será calculado o fatorial de um número dado em n, para que seja calculado o fatorial de n, a função irá usar da recursividade (chamando ela mesma) várias vezes multiplicando n por n - 1. Por exemplo, se n fosse 10, o que a função iria fazer, seria multiplicar 10 pelo fatorial 9, e assim por diante até que n seja igual a 0. Então dependendo do valor de n, o número de operações necessárias até encontrar o fatorial de n, pode ser gigantesco, podendo até ser números impossíveis de serem calculados, o que torna esse um algoritmo de complexidade O(n!). No exemplo abaixo será mostrado como funciona o calcúlo dessa função:
+
+
+    fatorial(10) chama fatorial(9)
+    fatorial(9) chama fatorial(8)
+    fatorial(8) chama fatorial(7)
+    fatorial(7) chama fatorial(6)
+    fatorial(6) chama fatorial(5)
+    fatorial(5) chama fatorial(4)
+    fatorial(4) chama fatorial(3)
+    fatorial(3) chama fatorial(2)
+    fatorial(2) chama fatorial(1)
+    fatorial(1) chama fatorial(0)
+
+    Depois os fatoriais iram ser multiplicados pelo resultado da multiplicação anterior, assim:
+    
+    fatorial(0) = 1
+    fatorial(1) = 1 * 1 = 1
+    fatorial(2) = 2 * 1 = 2
+    fatorial(3) = 3 * 2 = 6
+    fatorial(4) = 4 * 6 = 24
+    fatorial(5) = 5 * 24 = 120
+    fatorial(6) = 6 * 120 = 720
+    fatorial(7) = 7 * 720 = 5040
+    fatorial(8) = 8 * 5040 = 40320
+    fatorial(9) = 9 * 40320 = 362880
+    fatorial(10) = 10 * 362880 = 3.628.800
+*/
+
+
+/*Na hora de calcular a complexidade de um algoritmo, a notação Big O seguira pelo menos 3 passos. O primeiro passo, é sempre levar em consideração as repetições ou iterações do algoritmo e a forma com essas iterações são estruturadas no algoritmo. O segundo passo, é verificar a complexidade das funções que contém na linguagem, e o terceiro passo, é ignorar as constantes do algoritmo e sempre utilizar como medida os termos de maior notação. Ou seja, para calcular a complexidade do algoritmo, o termo de maior grau irá se sobressair. As estruturas de repetição, são consideradas O(n), pois elas ocorrem de acordo com o tamanho da entrada n.*/
+
+/*EXEMPLOS*/
+
+let f = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+function example1(f){
+    for(let i = 0; i < f.length; i++){ // O(n)
+        console.log(f[i]); // O(1)
+    }
+}
+
+/*Utilizando os passos descritos acima, iremos verificar se o algoritmo possui alguma estrutura de repetição. Caso houver, as constantes será ignoradas e sempre será utilizada a notação de maior grau. No caso desse algoritmo, ele possui uma estrutura de repetição, aonde ele irá percorrer o array de acordo com o tamanho da entrada n. Com a estrutura de repetição sendo O(n) e as constantes sendo ignoradas, a complexidade do algoritmo será O(n).*/
+
+
+let g = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+function example2(g){
+    for(let i = 0; i < g.length; i++){ // O(n)
+        for(let j = 0; j < g.length; j++){ // O(n)
+            if(g[i] === g[j]){ // O(1)
+                console.log(g[i]); // O(1)
+            }
+        }
+    }
+
+    return;
+}
+
+/*Sendo ignoradas as constantes e havendo duas ou mais estrutura de repetição alinhadas (uma estrutura dentro da outra com os mesmos valores de n), será multiplicada as notações de maior de grau e assim a complexidade geral desse algoritmo será O(n^2) que é a complexidade quadrática.
+
+    
+    O(n) * O(n) + O(1) + O(1)
+
+    As constantes será eliminadas
+
+    O(n) * O(n) = O(n^2)
+
+    E será multiplicado as notações de maior grau tendo como resultado O(n^2)  
+*/
 
