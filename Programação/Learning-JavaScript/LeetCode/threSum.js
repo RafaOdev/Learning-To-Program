@@ -29,10 +29,6 @@ var threeSumClosest = function(nums, target) {
 };
 
 
-
-
-console.log(threeSumClosest([1, 1, 1, 0], -100)) // -100
 console.log(threeSumClosest([-1,2,1,-4], 1)) // 2
 console.log(threeSumClosest([0, 0, 0, 0], 1)) // 0
 console.log(threeSumClosest([0,1,2], 0)) // 3
-
