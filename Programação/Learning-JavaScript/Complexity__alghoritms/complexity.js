@@ -33,9 +33,8 @@ for(let j = 0; j < B.length; j++){
 
 /*ESTRATÉGIA MÉDIA*/
 
-let treeBinarie = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-let item = 6;
-function search(){
+
+function search(treeBinarie, item){
     baixo = 0;
     alto = treeBinarie.length - 1;
 
@@ -55,7 +54,7 @@ function search(){
     return null;
 }
 
-console.log(search());
+console.log(search([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 6));
 
 /*Nesse algoritmo, a estratégia média é utilizada para encontrar o elemento desejado. Aonde a cada iteração cortamos pela metade os número de um possível resultado e pela notação Big O esse algoritmo é O(log n), pois esse algoritmo cresce de forma logarítmica, e com esse algoritmo podendo reduzir de forma significativa o seu número de operações necessárias para encontrar o elemento.*/
 
@@ -244,7 +243,7 @@ function fatorial(n){
     }
 }
 
-console.log(factorial(10));
+console.log(fatorial(10));
 
 /*Nesse exemplo de algoritmo com complexidade fatorial, será calculado o fatorial de um número dado em n, para que seja calculado o fatorial de n, a função irá usar da recursividade (chamando ela mesma) várias vezes multiplicando n por n - 1. Por exemplo, se n fosse 10, o que a função iria fazer, seria multiplicar 10 pelo fatorial 9, e assim por diante até que n seja igual a 0. Então dependendo do valor de n, o número de operações necessárias até encontrar o fatorial de n, pode ser gigantesco, podendo até ser números impossíveis de serem calculados, o que torna esse um algoritmo de complexidade O(n!). No exemplo abaixo será mostrado como funciona o calcúlo dessa função:
 
@@ -276,44 +275,93 @@ console.log(factorial(10));
 */
 
 
-/*Na hora de calcular a complexidade de um algoritmo, a notação Big O seguira pelo menos 3 passos. O primeiro passo, é sempre levar em consideração as repetições ou iterações do algoritmo e a forma com essas iterações são estruturadas no algoritmo. O segundo passo, é verificar a complexidade das funções que contém na linguagem, e o terceiro passo, é ignorar as constantes do algoritmo e sempre utilizar como medida os termos de maior notação. Ou seja, para calcular a complexidade do algoritmo, o termo de maior grau irá se sobressair. As estruturas de repetição, são consideradas O(n), pois elas ocorrem de acordo com o tamanho da entrada n.*/
+/*Na hora de calcular a complexidade de um algoritmo, a notação Big O seguirá pelo menos 3 passos. O primeiro passo, é sempre levar em consideração as repetições ou iterações do algoritmo e a forma com essas iterações são estruturadas no algoritmo. O segundo passo, é verificar a complexidade das funções que contém na linguagem, e o terceiro passo, é ignorar as constantes do algoritmo e sempre utilizar como medida os termos de maior notação. Ou seja, para calcular a complexidade do algoritmo, o termo de maior grau irá se sobressair. As estruturas de repetição, são consideradas O(n), pois elas ocorrem de acordo com o tamanho da entrada n.*/
 
 /*EXEMPLOS*/
 
-let f = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-
 function example1(f){
+    let result = []; // O(1)
     for(let i = 0; i < f.length; i++){ // O(n)
-        console.log(f[i]); // O(1)
+        result.push(f[i]); // O(1)
     }
+
+    return console.log(result);
 }
+
+example1([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
 
 /*Utilizando os passos descritos acima, iremos verificar se o algoritmo possui alguma estrutura de repetição. Caso houver, as constantes será ignoradas e sempre será utilizada a notação de maior grau. No caso desse algoritmo, ele possui uma estrutura de repetição, aonde ele irá percorrer o array de acordo com o tamanho da entrada n. Com a estrutura de repetição sendo O(n) e as constantes sendo ignoradas, a complexidade do algoritmo será O(n).*/
 
-
-let g = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-
-function example2(g){
-    for(let i = 0; i < g.length; i++){ // O(n)
-        for(let j = 0; j < g.length; j++){ // O(n)
-            if(g[i] === g[j]){ // O(1)
-                console.log(g[i]); // O(1)
+function example2(f){
+    for(let i = 0; i < f.length; i++){ // O(n)
+        for(let j = 0; j < f.length; j++){ // O(n)
+            if(f[i] < f[j]){ // O(1)
+                let current = f[i]; // O(1)
+                f[i] = f[j]; // O(1)
+                f[j] = current; // O(1)
             }
         }
     }
 
-    return;
+    return f; // O(1)
 }
+
+console.log(example2([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
 
 /*Sendo ignoradas as constantes e havendo duas ou mais estrutura de repetição alinhadas (uma estrutura dentro da outra com os mesmos valores de n), será multiplicada as notações de maior de grau e assim a complexidade geral desse algoritmo será O(n^2) que é a complexidade quadrática.
 
     
-    O(n) * O(n) + O(1) + O(1)
+    O(n) * O(n + O(1) + O(1) + O(1) + O(1)) = O(n) * O(3n)
 
-    As constantes será eliminadas
+    As constantes será eliminadas, e será multiplicada as notações de maior grau.
 
     O(n) * O(n) = O(n^2)
-
-    E será multiplicado as notações de maior grau tendo como resultado O(n^2)  
 */
+
+function exemple3(f){
+    let number = 0;
+    for(let i = 0; i < f.length; i++){ // O(n)
+        number = f[i];
+    }
+
+
+    for(let j = 1; j < f.length; j++){ // O(n)
+        number = number + f[j];
+    }
+
+    return number;
+}
+
+console.log(exemple3([1, 2, 3, 4, 5, 6, 7, 25, 8, 1, 30, 10, 8, 9, 10]));
+
+/*Esse algoritmo possui duas estruturas de repetições, porém, elas não estão alinhadas. Com as estruturas não estando alinhadas, cada estrutura será independente. Assim não será dobrado o valor de n, e sim somado.
+
+    O(n) + O(n) = O(n + n)
+
+    descartando as constantes, e levando apenas em consideração a maior notação, a complexidade é O(n).
+*/
+
+function exemple4(f){
+    let meio = Math.floor(f.length / 2);
+    let esquerda = f.slice(0, meio);
+    let direita = f.slice(meio);
+    let n1 = 0;
+    let n2 = 0;
+
+    for(let i = 0;  i < esquerda.length; i++){
+        n1 = esquerda[i];
+    }
+
+    for(let j = 0; j < direita.length; j++){
+        n2 = direita[j];
+    }
+
+    if(n1 < n2){
+        let temp = n1;
+        n1 = n2;
+        n2 = temp;
+    }
+
+    return f;
+}
 
