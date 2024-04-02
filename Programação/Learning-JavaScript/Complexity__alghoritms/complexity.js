@@ -235,44 +235,32 @@ console.log(result);
 
 /*Crescimento fatorial - O(n!)*/
 
-function fatorial(n){
-    if(n === 0){
-        return 1;
+function fatorial(array, i, j){
+   const temp = array[i]; 
+   array[i] = array[j]; 
+   array[j] = temp; 
+}
+
+function generate(array, n){
+    if(n === 1){ 
+        console.log(array);
     }else{
-        return n * fatorial(n - 1);
+        for(let i = 0; i < n - 1; i++){ 
+            generate(array, n - 1); 
+            if(n % 2 === 0){ 
+                fatorial(array, i, n - 1); 
+            }else{
+                fatorial(array, 0, n - 1); 
+            }
+        }
+        generate(array, n - 1);
     }
 }
 
-console.log(fatorial(10));
+const elements = [1, 2, 3, 4];
+generate(elements, elements.length);
 
-/*Nesse exemplo de algoritmo com complexidade fatorial, será calculado o fatorial de um número dado em n, para que seja calculado o fatorial de n, a função irá usar da recursividade (chamando ela mesma) várias vezes multiplicando n por n - 1. Por exemplo, se n fosse 10, o que a função iria fazer, seria multiplicar 10 pelo fatorial 9, e assim por diante até que n seja igual a 0. Então dependendo do valor de n, o número de operações necessárias até encontrar o fatorial de n, pode ser gigantesco, podendo até ser números impossíveis de serem calculados, o que torna esse um algoritmo de complexidade O(n!). No exemplo abaixo será mostrado como funciona o calcúlo dessa função:
-
-
-    fatorial(10) chama fatorial(9)
-    fatorial(9) chama fatorial(8)
-    fatorial(8) chama fatorial(7)
-    fatorial(7) chama fatorial(6)
-    fatorial(6) chama fatorial(5)
-    fatorial(5) chama fatorial(4)
-    fatorial(4) chama fatorial(3)
-    fatorial(3) chama fatorial(2)
-    fatorial(2) chama fatorial(1)
-    fatorial(1) chama fatorial(0)
-
-    Depois os fatoriais iram ser multiplicados pelo resultado da multiplicação anterior, assim:
-    
-    fatorial(0) = 1
-    fatorial(1) = 1 * 1 = 1
-    fatorial(2) = 2 * 1 = 2
-    fatorial(3) = 3 * 2 = 6
-    fatorial(4) = 4 * 6 = 24
-    fatorial(5) = 5 * 24 = 120
-    fatorial(6) = 6 * 120 = 720
-    fatorial(7) = 7 * 720 = 5040
-    fatorial(8) = 8 * 5040 = 40320
-    fatorial(9) = 9 * 40320 = 362880
-    fatorial(10) = 10 * 362880 = 3.628.800
-*/
+/*Nesse exemplo de complexidade fatorial, foi feita um algoritmo que gera todas as permutações de elementos em um array de tamanho n. O algoritmo consiste em percorrer o array, trocar os elementos de posição e depois percorer novamente o array com chamadas recursivas para cada elemento percorrido gerando a sua permutação. Com isso, o algoritmo terá uma complexidade fatorial, pois a cada chamada recursiva, o número de operações irá aumentar de forma fatorial.*/
 
 
 /*Na hora de calcular a complexidade de um algoritmo, a notação Big O seguirá pelo menos 3 passos. O primeiro passo, é sempre levar em consideração as repetições ou iterações do algoritmo e a forma com essas iterações são estruturadas no algoritmo. O segundo passo, é verificar a complexidade das funções que contém na linguagem, e o terceiro passo, é ignorar as constantes do algoritmo e sempre utilizar como medida os termos de maior notação. Ou seja, para calcular a complexidade do algoritmo, o termo de maior grau irá se sobressair. As estruturas de repetição, são consideradas O(n), pois elas ocorrem de acordo com o tamanho da entrada n.*/
@@ -340,28 +328,3 @@ console.log(exemple3([1, 2, 3, 4, 5, 6, 7, 25, 8, 1, 30, 10, 8, 9, 10]));
 
     descartando as constantes, e levando apenas em consideração a maior notação, a complexidade é O(n).
 */
-
-function exemple4(f){
-    let meio = Math.floor(f.length / 2);
-    let esquerda = f.slice(0, meio);
-    let direita = f.slice(meio);
-    let n1 = 0;
-    let n2 = 0;
-
-    for(let i = 0;  i < esquerda.length; i++){
-        n1 = esquerda[i];
-    }
-
-    for(let j = 0; j < direita.length; j++){
-        n2 = direita[j];
-    }
-
-    if(n1 < n2){
-        let temp = n1;
-        n1 = n2;
-        n2 = temp;
-    }
-
-    return f;
-}
-
