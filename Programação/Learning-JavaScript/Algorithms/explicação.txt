@@ -1,0 +1,5 @@
+ALGORITMOS
+
+    Um algoritmo é um conjunto de instruções que seguirá uma lógica a fim de excercer uma tarefa especifíca que irá gerar uma saída, apartir de uma entrada. Estudar, entender e resolver algoritmos seguindo uma boa lógica é um dos mais importantes pilares de um desenvolvedor.
+    Para isso, existem vários algoritmos para estudos que podem ajudar ao desenvolvedor adquirir um pensamento lógico mais afiado, e também ajuda a adquirir uma maior experiência para resolver um algoritmo já existente ou a criar o seu próprio algoritmo.
+    Nesse repositório, será estudado e implementado diversos algoritmos, desde algoritmos de ordenação, busca, grafos, entre outros. E também desde algoritmos simples e lentos até algoritmos mais complexos e rápidos. Para que o desenvolvedor entenda o uso e a importância de cada algoritmo.    

@@ -1,0 +1,34 @@
+ALGORITMOS DE ORDENAÇÃO
+
+    Um dos problemas mais classicos existentes na área de desenvolvimento, é o de ordenação de elementos. Onde temos um conjunto de elementos desordenados e de alguma maneira é preciso ordená-los, seja de forma crescente ou decrescente. Para isso existem diversos algoritmos de ordeneação, desde algoritmos inteligentes e rápidos, até algoritmos mais simples e lentos.
+
+    Algoritmos de ordenação mais conhecidos:
+        - Bubble Sort
+        - Selection Sort
+        - Insertion Sort
+        - Merge Sort
+        - Quick Sort
+        - Heap Sort
+        - Shell Sort
+        - Counting Sort
+        - Radix Sort
+        - Bucket Sort
+        - Tim Sort
+        - Comb Sort
+        - Cocktail Sort
+        - Gnome Sort
+        - Pancake Sort
+        - Cycle Sort
+        - Bitonic Sort
+        - Bogo Sort
+        - Stooge Sort
+        - Sleep Sort
+        - Bead Sort
+        - Bozo Sort
+        - Brick Sort
+        - Batcher Sort
+        - Binary Tree Sort
+        - Block Sort
+
+
+    Nessa lista de algoritmos, existem algoritmos rápidos e inteligentes como o Quick Sort, Merge Sort, Heap Sort, Shell Sort, Tim Sort, entre outros. E também existem algoritmos mais simples e lentos como o Bubble Sort, Selection Sort, Insertion Sort, entre outros. Mas mesmo algoritmos mais simples e lentos, pode ser importante para o desenvolvedor estudar, pois o seu uso e implementação pode ser útil em determinadas situações e problemas.
